@@ -1,3 +1,5 @@
+deployed at [https://dwilli77.github.io/sight-words/](https://dwilli77.github.io/sight-words/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
