@@ -1,0 +1,95 @@
+.App {
+  font-family: "Lato", sans-serif;
+  color: #2b3843;
+  .grey-out {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(43, 56, 67, 0.9);
+  }
+  .congrats {
+    position: fixed;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: 100px;
+    height: 50vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+    i {
+      font-size: 180px;
+    }
+    .good {
+      color: green;
+    }
+    .bad {
+      color: red;
+    }
+    canvas {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .app-container {
+    width: 90%;
+    border-radius: 8px;
+    background: #f4f4f5;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 25px;
+    .prompt {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        font-size: 18px;
+        border: 1px solid #2b3843;
+        border-radius: 5px;
+        padding: 3px 5px;
+        margin-bottom: 25px;
+        text-align: center;
+        &:focus {
+          outline: none;
+        }
+      }
+      .check-word {
+        border: 2px solid #e79235;
+        background: transparent;
+        color: #e79235;
+        font-size: 18px;
+        border-radius: 500px;
+        padding: 5px 10px;
+        font-weight: 550;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background: #e79235;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
