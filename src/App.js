@@ -31,6 +31,9 @@ const App = () => {
 
   const _checkWord = e => {
     e.preventDefault();
+    if (!typedWord) {
+      return false;
+    }
     if (currentWord === typedWord.toLowerCase()) {
       setModalOpen(true);
       setTimeout(_closeModal, 4000);
