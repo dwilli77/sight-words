@@ -48,23 +48,6 @@ const App = () => {
 
   return (
     <div className="App">
-      {modalOpen ? (
-        <>
-          <div className="grey-out" />
-          <div className="congrats">
-            <Confetti width={400} height={400} />
-            <i className="fas fa-check-circle good" />
-          </div>
-        </>
-      ) : null}
-      {failedValidation ? (
-        <>
-          <div className="grey-out" />
-          <div className="congrats">
-            <i className="fas fa-times-circle bad" />
-          </div>
-        </>
-      ) : null}
       <div className="app-container">
         <p className="prompt">Your word is:</p>
         <h3 className={failedValidation ? "red" : ""}>
@@ -86,6 +69,23 @@ const App = () => {
           </button>
         </form>
       </div>
+      {modalOpen ? (
+        <>
+          <div className="grey-out" />
+          <div className="congrats">
+            <Confetti width={400} height={400} />
+            <i className="fas fa-check-circle good" />
+          </div>
+        </>
+      ) : null}
+      {failedValidation ? (
+        <>
+          <div className="grey-out" />
+          <div className="congrats">
+            <i className="fas fa-times-circle bad" />
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };
