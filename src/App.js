@@ -15,7 +15,11 @@ const App = () => {
     _getWord();
   }, []);
 
-  // useEffect(() => console.log(words));
+  useEffect(() => {
+    if (words.length === 0) {
+      setWords(sightWords);
+    }
+  }, [words]);
 
   const _getWord = () => {
     let index = Math.floor(Math.random() * words.length);
@@ -67,14 +71,16 @@ const App = () => {
           {currentWord === "i" ? currentWord.toUpperCase() : currentWord}
         </h3>
         <form>
-          <input
-            type="text"
-            value={typedWord}
-            onChange={e => setTypedWord(e.target.value)}
-            placeholder="type your word here..."
-            autoComplete="new-word"
-            disabled={modalOpen}
-          />
+          {modalOpen || failedValidation ? null : (
+            <input
+              type="text"
+              value={typedWord}
+              onChange={e => setTypedWord(e.target.value)}
+              placeholder="type your word here..."
+              autoComplete="new-word"
+              // disabled={modalOpen || failedValidation}
+            />
+          )}
           <button className="check-word" onClick={_checkWord}>
             Check my word
           </button>
