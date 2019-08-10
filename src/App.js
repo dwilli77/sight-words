@@ -26,7 +26,7 @@ const App = () => {
   const _getWord = () => {
     let index = Math.floor(Math.random() * words.length);
     setCurrentWord(words[index]);
-    setWords(words.filter(word => word !== currentWord));
+    setWords(words.filter(word => word !== words[index]));
   };
 
   const _checkWord = e => {
