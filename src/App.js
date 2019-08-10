@@ -54,16 +54,16 @@ const App = () => {
           {currentWord === "i" ? currentWord.toUpperCase() : currentWord}
         </h3>
         <form>
-          {modalOpen || failedValidation ? null : (
-            <input
-              type="text"
-              value={typedWord}
-              onChange={e => setTypedWord(e.target.value)}
-              placeholder="type your word here..."
-              autoComplete="new-word"
-              // disabled={modalOpen || failedValidation}
-            />
-          )}
+          {/* {modalOpen || failedValidation ? null : ( */}
+          <input
+            type="text"
+            value={typedWord}
+            onChange={e => setTypedWord(e.target.value)}
+            placeholder="type your word here..."
+            autoComplete="new-word"
+            disabled={modalOpen || failedValidation}
+          />
+          // )}
           <button className="check-word" onClick={_checkWord}>
             Check my word
           </button>
