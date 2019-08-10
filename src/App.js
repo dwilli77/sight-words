@@ -54,7 +54,6 @@ const App = () => {
           {currentWord === "i" ? currentWord.toUpperCase() : currentWord}
         </h3>
         <form>
-          {/* {modalOpen || failedValidation ? null : ( */}
           <input
             type="text"
             value={typedWord}
@@ -63,7 +62,7 @@ const App = () => {
             autoComplete="new-word"
             disabled={modalOpen || failedValidation}
           />
-          // )}
+
           <button className="check-word" onClick={_checkWord}>
             Check my word
           </button>
