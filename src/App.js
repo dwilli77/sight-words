@@ -12,11 +12,13 @@ const App = () => {
   const [failedValidation, setFailedValidation] = useState(false);
 
   useEffect(() => {
+    window.mixpanel.track("site visit");
     _getWord();
   }, []);
 
   useEffect(() => {
     if (words.length === 0) {
+      window.mixpanel.track("cycled words");
       setWords(sightWords);
     }
   }, [words]);
