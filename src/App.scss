@@ -51,6 +51,14 @@
     flex-direction: column;
     align-items: center;
     padding: 35px 25px;
+    .get-started {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .name-prompt {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
     .prompt {
       font-size: 24px;
       margin-bottom: 15px;
@@ -77,6 +85,7 @@
           outline: none;
         }
       }
+      .submit-name,
       .check-word {
         border: 2px solid #e79235;
         background: transparent;
@@ -92,6 +101,13 @@
           background: #e79235;
           color: #fff;
           cursor: pointer;
+        }
+      }
+      .submit-name {
+        border: 2px solid #1e90ff;
+        color: #1e90ff;
+        &:hover {
+          background: #1e90ff;
         }
       }
     }
