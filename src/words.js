@@ -8,5 +8,9 @@ export const sightWords = [
   "and",
   "like",
   "me",
-  "we"
+  "we",
+  "be",
+  "he",
+  "she",
+  "to"
 ];
