@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sight-words/static/css/main.ed2cc48e.chunk.css",
-    "main.js": "/sight-words/static/js/main.3e65938b.chunk.js",
-    "main.js.map": "/sight-words/static/js/main.3e65938b.chunk.js.map",
+    "main.css": "/sight-words/static/css/main.cffec9b1.chunk.css",
+    "main.js": "/sight-words/static/js/main.42357a2f.chunk.js",
+    "main.js.map": "/sight-words/static/js/main.42357a2f.chunk.js.map",
     "runtime~main.js": "/sight-words/static/js/runtime~main.94f54f0a.js",
     "runtime~main.js.map": "/sight-words/static/js/runtime~main.94f54f0a.js.map",
-    "static/js/2.c243ac47.chunk.js": "/sight-words/static/js/2.c243ac47.chunk.js",
-    "static/js/2.c243ac47.chunk.js.map": "/sight-words/static/js/2.c243ac47.chunk.js.map",
+    "static/js/2.4b07fd0e.chunk.js": "/sight-words/static/js/2.4b07fd0e.chunk.js",
+    "static/js/2.4b07fd0e.chunk.js.map": "/sight-words/static/js/2.4b07fd0e.chunk.js.map",
     "index.html": "/sight-words/index.html",
-    "precache-manifest.325b4a7fb61179975bf720a8e5937375.js": "/sight-words/precache-manifest.325b4a7fb61179975bf720a8e5937375.js",
+    "precache-manifest.3abf24209ac432ac2307f877ae664f90.js": "/sight-words/precache-manifest.3abf24209ac432ac2307f877ae664f90.js",
     "service-worker.js": "/sight-words/service-worker.js",
-    "static/css/main.ed2cc48e.chunk.css.map": "/sight-words/static/css/main.ed2cc48e.chunk.css.map"
+    "static/css/main.cffec9b1.chunk.css.map": "/sight-words/static/css/main.cffec9b1.chunk.css.map"
   }
 }
