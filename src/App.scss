@@ -51,7 +51,7 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      top: 10%;
+      top: 15px;
       font-size: 24px;
       color: #e79235;
     }
@@ -60,7 +60,7 @@
         font-size: 180px;
       }
       50% {
-        font-size: 250px;
+        font-size: 200px;
       }
       100% {
         font-size: 180px;
@@ -83,10 +83,12 @@
       margin-bottom: 15px;
     }
     .name-prompt {
+      text-align: center;
       font-size: 40px;
       margin-bottom: 15px;
     }
     .prompt {
+      text-align: center;
       font-size: 24px;
       margin-bottom: 15px;
     }

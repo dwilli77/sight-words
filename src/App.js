@@ -15,13 +15,13 @@ const App = () => {
   const [score, setScore] = useState(0);
 
   useEffect(() => {
-    // window.mixpanel.track("site visit");
+    window.mixpanel.track("site visit");
     _getWord();
   }, []);
 
   useEffect(() => {
     if (words.length === 0) {
-      // window.mixpanel.track("cycled words: " + name);
+      window.mixpanel.track("cycled words: " + name);
       setWords(sightWords);
     }
   }, [words]);
@@ -66,7 +66,7 @@ const App = () => {
       return false;
     } else {
       setNameValidated(true);
-      // window.mixpanel.track(`logged name: ${name}`);
+      window.mixpanel.track(`logged name: ${name}`);
     }
   };
 
