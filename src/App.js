@@ -119,7 +119,7 @@ const App = () => {
           <>
             <div className='grey-out' />
             <div className='congrats'>
-              <p className='congrats-note'>{`Great job ${name}! You finished all the words!`}</p>
+              <Confetti width={400} height={400} />
               <i className='fas fa-dharmachakra doubloon' />
             </div>
           </>

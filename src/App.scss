@@ -39,6 +39,8 @@
     .doubloon {
       color: #e8b923;
       animation: pulse 2s infinite;
+      text-shadow: -1px -1px 0 #2b3843, 1px -1px 0 #2b3843, -1px 1px 0 #2b3843,
+        1px 1px 0 #2b3843;
     }
     canvas {
       height: 100%;
