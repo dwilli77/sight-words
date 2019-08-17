@@ -12,18 +12,26 @@ const App = () => {
   const [failedValidation, setFailedValidation] = useState(false);
   const [name, setName] = useState("");
   const [nameValidated, setNameValidated] = useState(false);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
-    window.mixpanel.track("site visit");
+    // window.mixpanel.track("site visit");
     _getWord();
   }, []);
 
   useEffect(() => {
     if (words.length === 0) {
-      window.mixpanel.track("cycled words: " + name);
+      // window.mixpanel.track("cycled words: " + name);
       setWords(sightWords);
     }
   }, [words]);
+
+  useEffect(() => {
+    if (name) {
+      setModalOpen(true);
+      setTimeout(_closeModal, 4000);
+    }
+  }, [score]);
 
   const _getWord = () => {
     let index = Math.floor(Math.random() * words.length);
@@ -37,10 +45,9 @@ const App = () => {
       return false;
     }
     if (currentWord === typedWord.toLowerCase()) {
-      setModalOpen(true);
-      setTimeout(_closeModal, 4000);
+      setScore(score + 1);
       setTypedWord("");
-      _getWord();
+      setTimeout(_getWord, 0);
     } else {
       setFailedValidation(true);
       setTimeout(_closeModal, 4000);
@@ -59,7 +66,7 @@ const App = () => {
       return false;
     } else {
       setNameValidated(true);
-      window.mixpanel.track(`logged name: ${name}`);
+      // window.mixpanel.track(`logged name: ${name}`);
     }
   };
 
@@ -97,7 +104,7 @@ const App = () => {
                 value={name}
                 onChange={e => setName(e.target.value)}
                 placeholder='type your name here...'
-                autocomplete='new-name'
+                autoComplete='new-name'
                 maxLength='15'
               />
               <button className='submit-name' onClick={_checkName}>
@@ -108,13 +115,23 @@ const App = () => {
         )}
       </div>
       {modalOpen ? (
-        <>
-          <div className='grey-out' />
-          <div className='congrats'>
-            <Confetti width={400} height={400} />
-            <i className='fas fa-check-circle good' />
-          </div>
-        </>
+        score % sightWords.length === 1 ? (
+          <>
+            <div className='grey-out' />
+            <div className='congrats'>
+              <p className='congrats-note'>{`Great job ${name}! You finished all the words!`}</p>
+              <i className='fas fa-dharmachakra doubloon' />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className='grey-out' />
+            <div className='congrats'>
+              <Confetti width={400} height={400} />
+              <i className='fas fa-check-circle good' />
+            </div>
+          </>
+        )
       ) : null}
       {failedValidation ? (
         <>
