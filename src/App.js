@@ -115,7 +115,7 @@ const App = () => {
         )}
       </div>
       {modalOpen ? (
-        score % sightWords.length === 1 ? (
+        score % sightWords.length === 0 ? (
           <>
             <div className='grey-out' />
             <div className='congrats'>
