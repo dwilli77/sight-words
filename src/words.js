@@ -12,5 +12,9 @@ export const sightWords = [
   "be",
   "he",
   "she",
-  "to"
+  "to",
+  "it",
+  "is",
+  "in",
+  "my"
 ];
