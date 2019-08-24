@@ -159,7 +159,7 @@ const App = () => {
       {instructionsModal && (
         <>
           <div className='grey-out' onClick={_closeInstructions} />
-          <div className='congrats'>
+          <div className='instructions-modal'>
             <i className='fas fa-times' onClick={_closeInstructions} />
             <p className='instructions-title'>Instructions</p>
             <ul>
