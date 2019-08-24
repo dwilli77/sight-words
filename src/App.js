@@ -13,6 +13,7 @@ const App = () => {
   const [name, setName] = useState("");
   const [nameValidated, setNameValidated] = useState(false);
   const [score, setScore] = useState(0);
+  const [instructionsModal, setInstructionsModal] = useState(false);
 
   useEffect(() => {
     window.mixpanel.track("site visit");
@@ -60,6 +61,14 @@ const App = () => {
     setFailedValidation(false);
   };
 
+  const _openInstructions = () => {
+    setInstructionsModal(true);
+  };
+
+  const _closeInstructions = () => {
+    setInstructionsModal(false);
+  };
+
   const _checkName = e => {
     e.preventDefault();
     if (!name) {
@@ -97,6 +106,13 @@ const App = () => {
         ) : (
           <>
             <p className='get-started'>Let's get started!</p>
+            <p className='instructions'>
+              Parents:{" "}
+              <span className='instruction-link' onClick={_openInstructions}>
+                Click here
+              </span>{" "}
+              for instructions
+            </p>
             <p className='name-prompt'>What's your name?</p>
             <form>
               <input
@@ -114,8 +130,8 @@ const App = () => {
           </>
         )}
       </div>
-      {modalOpen ? (
-        score % sightWords.length === 0 ? (
+      {modalOpen &&
+        (score % sightWords.length === 0 ? (
           <>
             <div className='grey-out' />
             <div className='congrats'>
@@ -131,16 +147,41 @@ const App = () => {
               <i className='fas fa-check-circle good' />
             </div>
           </>
-        )
-      ) : null}
-      {failedValidation ? (
+        ))}
+      {failedValidation && (
         <>
           <div className='grey-out' />
           <div className='congrats'>
             <i className='fas fa-times-circle bad' />
           </div>
         </>
-      ) : null}
+      )}
+      {instructionsModal && (
+        <>
+          <div className='grey-out' onClick={_closeInstructions} />
+          <div className='congrats'>
+            <i className='fas fa-times' onClick={_closeInstructions} />
+            <p className='instructions-title'>Instructions</p>
+            <ul>
+              <li>Have your child type his/her name for a customized prompt</li>
+              <li>A sight word will display once the game begins</li>
+              <li>Have your child say the word before they begin typing</li>
+              <li>
+                Once your child has read the word, have them type it in and
+                focus on each letter
+              </li>
+              <li>
+                After clicking 'Check my word', they'll get feedback on whether
+                it was typed correctly or not (it is not case sensitive)
+              </li>
+              <li>
+                Once all the sight words have been completed, they'll get a gold
+                doubloon and the words will start over
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 };

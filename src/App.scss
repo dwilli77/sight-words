@@ -68,6 +68,25 @@
         font-size: 180px;
       }
     }
+    .instructions-title {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    ul {
+      list-style-type: circle;
+      line-height: 2;
+      margin-top: 30px;
+    }
+    .fa-times {
+      position: absolute;
+      font-size: 22px;
+      right: 15px;
+      top: 15px;
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   .app-container {
     width: 85%;
@@ -83,6 +102,17 @@
     .get-started {
       font-size: 24px;
       margin-bottom: 15px;
+    }
+    .instructions {
+      margin-bottom: 15px;
+      .instruction-link {
+        // text-decoration: underline;
+        border-bottom: 1px dotted #1e90ff;
+        color: #1e90ff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     .name-prompt {
       text-align: center;
