@@ -16,5 +16,9 @@ export const sightWords = [
   "it",
   "is",
   "in",
-  "my"
+  "my",
+  "by",
+  "on",
+  "his",
+  "had"
 ];
