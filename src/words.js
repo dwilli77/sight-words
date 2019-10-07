@@ -20,5 +20,8 @@ export const sightWords = [
   "by",
   "on",
   "his",
-  "had"
+  "had",
+  "was",
+  "for",
+  "have"
 ];
