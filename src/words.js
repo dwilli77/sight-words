@@ -23,5 +23,9 @@ export const sightWords = [
   "had",
   "was",
   "for",
-  "have"
+  "have",
+  "go",
+  "am",
+  "as",
+  "are"
 ];
