@@ -27,5 +27,13 @@ export const sightWords = [
   "go",
   "am",
   "as",
-  "are"
+  "are",
+  "look",
+  "you",
+  "up",
+  "all",
+  "because",
+  "with",
+  "they",
+  "has"
 ];
